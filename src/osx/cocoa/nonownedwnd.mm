@@ -302,6 +302,10 @@ static NSResponder* s_nextFirstResponder = NULL;
 - (void)windowDidMove:(NSNotification *)notification;
 - (BOOL)windowShouldClose:(id)window;
 - (BOOL)windowShouldZoom:(NSWindow *)window toFrame:(NSRect)newFrame;
+// - (void)windowWillEnterFullScreen:(NSNotification *)notification;
+- (void)windowDidEnterFullScreen:(NSNotification *)notification;
+// - (void)windowWillExitFullScreen:(NSNotification *)notification;
+- (void)windowDidExitFullScreen:(NSNotification *)notification;
 
 @end
 
@@ -534,6 +538,20 @@ extern int wxOSXGetIdFromSelector(SEL action );
     return true;
 }
 
+- (void)windowDidEnterFullScreen:(NSNotification *)notification
+{
+   NSWindow* window = (NSWindow*) [notification object];
+   wxNonOwnedWindowCocoaImpl* windowimpl = [window WX_implementation];
+   windowimpl->NotifyFullScreen(true);
+}
+
+- (void)windowDidExitFullScreen:(NSNotification *)notification
+{
+   NSWindow* window = (NSWindow*) [notification object];
+   wxNonOwnedWindowCocoaImpl* windowimpl = [window WX_implementation];
+   windowimpl->NotifyFullScreen(false);
+}
+
 @end
 
 IMPLEMENT_DYNAMIC_CLASS( wxNonOwnedWindowCocoaImpl , wxNonOwnedWindowImpl )
@@ -543,12 +561,14 @@ wxNonOwnedWindowCocoaImpl::wxNonOwnedWindowCocoaImpl( wxNonOwnedWindow* nonowned
 {
     m_macWindow = NULL;
     m_macFullScreenData = NULL;
+    m_isFullScreen = false;
 }
 
 wxNonOwnedWindowCocoaImpl::wxNonOwnedWindowCocoaImpl()
 {
     m_macWindow = NULL;
     m_macFullScreenData = NULL;
+    m_isFullScreen = false;
 }
 
 wxNonOwnedWindowCocoaImpl::~wxNonOwnedWindowCocoaImpl()
@@ -924,11 +944,21 @@ typedef struct
 
 bool wxNonOwnedWindowCocoaImpl::IsFullScreen() const
 {
-    return m_macFullScreenData != NULL ;
+    if ( [ m_macWindow respondsToSelector:@selector(toggleFullScreen:) ] )
+       return m_isFullScreen;
+   else
+      return m_macFullScreenData != NULL ;
 }
 
 bool wxNonOwnedWindowCocoaImpl::ShowFullScreen(bool show, long WXUNUSED(style))
 {
+    if ( [ m_macWindow respondsToSelector:@selector(toggleFullScreen:) ] )
+    {
+       if ( show != m_isFullScreen )
+          m_isFullScreen = show, [m_macWindow toggleFullScreen: nil];
+       return true;
+    }
+
     if ( show )
     {
         FullScreenData *data = (FullScreenData *)m_macFullScreenData ;
