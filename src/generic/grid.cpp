@@ -5479,7 +5479,10 @@ void wxGrid::OnKeyDown( wxKeyEvent& event )
                     if ( m_currentCellCoords == wxGridNoCellCoords )
                         break;
 
-                    int row = m_currentCellCoords.GetRow();
+                    const bool useSelectedBlockCorner =
+                        event.ShiftDown() && m_selectedBlockCorner != wxGridNoCellCoords;
+                    int row = useSelectedBlockCorner ? m_selectedBlockCorner.GetRow()
+                                                     : m_currentCellCoords.GetRow();
                     if ( event.ControlDown() )
                     {
                         row = 0;
@@ -5500,8 +5503,17 @@ void wxGrid::OnKeyDown( wxKeyEvent& event )
                             break;
                     }
 
-                    ClearSelection();
-                    GoToCell(row, GetColAt(col));
+                    if ( event.ShiftDown() )
+                    {
+                        UpdateBlockBeingSelected(m_currentCellCoords,
+                                                 wxGridCellCoords(row, col));
+                        MakeCellVisible(row, col);
+                    }
+                    else
+                    {
+                        ClearSelection();
+                        GoToCell(row, GetColAt(col));
+                    }
                 }
                 break;
 
@@ -5510,7 +5522,10 @@ void wxGrid::OnKeyDown( wxKeyEvent& event )
                     if ( m_currentCellCoords == wxGridNoCellCoords )
                         break;
 
-                    int row = m_currentCellCoords.GetRow();
+                    const bool useSelectedBlockCorner =
+                        event.ShiftDown() && m_selectedBlockCorner != wxGridNoCellCoords;
+                    int row = useSelectedBlockCorner ? m_selectedBlockCorner.GetRow()
+                                                     : m_currentCellCoords.GetRow();
                     if ( event.ControlDown() )
                     {
                         row = m_numRows - 1;
@@ -5531,8 +5546,17 @@ void wxGrid::OnKeyDown( wxKeyEvent& event )
                             break;
                     }
 
-                    ClearSelection();
-                    GoToCell(row, GetColAt(col));
+                    if ( event.ShiftDown() )
+                    {
+                        UpdateBlockBeingSelected(m_currentCellCoords,
+                                                 wxGridCellCoords(row, col));
+                        MakeCellVisible(row, col);
+                    }
+                    else
+                    {
+                        ClearSelection();
+                        GoToCell(row, GetColAt(col));
+                    }
                 }
                 break;
 
