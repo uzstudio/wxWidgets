@@ -475,3 +475,7 @@
 
 # /utils/wxrc/
 /utils/wxrc/wxrc_vc[789].sln
+bld_release_x86_64
+bld_debug_i386
+bld_debug_x86_64
+bld_release_i386
