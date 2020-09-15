@@ -195,6 +195,7 @@ bool wxDateTime::GetFirstWeekDay(wxDateTime::WeekDay *firstDay)
 }
 #endif // wxUSE_DATETIME
 
+#if defined(__DARWIN__) && !defined(__WXOSX_IPHONE__)
 bool wxCocoaLaunch(const char* const* argv, pid_t &pid)
 {
     // If there is not a single argument then there is no application
@@ -274,3 +275,4 @@ bool wxCocoaLaunch(const char* const* argv, pid_t &pid)
     }
     return true;
 }
+#endif

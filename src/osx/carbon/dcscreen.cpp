@@ -27,7 +27,9 @@ wxScreenDCImpl::wxScreenDCImpl( wxDC *owner ) :
    wxWindowDCImpl( owner )
 {
     CGRect cgbounds ;
+#if defined(__DARWIN__) && !defined(__WXOSX_IPHONE__)
     cgbounds = CGDisplayBounds(CGMainDisplayID());
+#endif
     m_width = (wxCoord)cgbounds.size.width;
     m_height = (wxCoord)cgbounds.size.height;
     SetGraphicsContext( wxGraphicsContext::Create() );
