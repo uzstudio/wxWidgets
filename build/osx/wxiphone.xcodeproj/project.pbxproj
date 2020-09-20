@@ -1563,6 +1563,7 @@
 		CF502E0E4D853CBBBEC885EF /* LexerSimple.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LexerSimple.cxx; path = ../../src/stc/scintilla/lexlib/LexerSimple.cxx; sourceTree = "<group>"; };
 		CF6511DE2CB43534A5566403 /* menuitem_osx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = menuitem_osx.cpp; path = ../../src/osx/menuitem_osx.cpp; sourceTree = "<group>"; };
 		CFBDB327E4A236A3ABFA326F /* webviewfshandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = webviewfshandler.cpp; path = ../../src/common/webviewfshandler.cpp; sourceTree = "<group>"; };
+		D01AF5EA2517473C00DB1BB4 /* setup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = setup.h; path = setup/iphone/include/wx/setup.h; sourceTree = "<group>"; };
 		D037EA567C253DEEA17E822B /* mousemanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mousemanager.cpp; path = ../../src/common/mousemanager.cpp; sourceTree = "<group>"; };
 		D06143F325165FD700AC055F /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		D06143F425165FD700AC055F /* chkconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chkconf.h; sourceTree = "<group>"; };
@@ -1739,6 +1740,7 @@
 		02A787C8E96336F3B7287626 /* wxiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				D01AF5EA2517473C00DB1BB4 /* setup.h */,
 				D0613BE625165E8100AC055F /* include */,
 				82F403E7B8653CBD908BC258 /* Frameworks */,
 				C2FC1A9BBB8C3046994369BF /* Products */,
