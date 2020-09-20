@@ -685,7 +685,6 @@
 		CDC0FF253B503BA19693D68D /* xh_propdlg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49BF55FA3427335097F99A2C /* xh_propdlg.cpp */; };
 		CE17002B5B7E375582747639 /* xh_choic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89EC3C6F9AEF3F6DA7CEB3B3 /* xh_choic.cpp */; };
 		CE2C937117FE3AB599DD30B9 /* sound_osx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9B2316B32653DA0939A372D /* sound_osx.cpp */; };
-		EA10DA3199813E90B39C70D3 /* xh_infobar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45C65E309F3A39598C043657 /* xh_infobar.cpp */; };
 		CEBAAB0C77983358A601BFFE /* jdmaster.c in Sources */ = {isa = PBXBuildFile; fileRef = ED19EF377E653F71B1876259 /* jdmaster.c */; };
 		CEC6430AEB6E3200BFA75D07 /* jfdctint.c in Sources */ = {isa = PBXBuildFile; fileRef = 90EC2A5B80EE3031BA4087B9 /* jfdctint.c */; };
 		CEE0D7A7D5D8323B9957A780 /* notifmsgg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924AA3A156F834BCA1A57976 /* notifmsgg.cpp */; };
@@ -783,6 +782,7 @@
 		E92EB502F79638B0BE569EF4 /* CallTip.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 4F58B88D42A93BD0B74ADF75 /* CallTip.cxx */; };
 		E9EDB5C92D5D3B529E8D73B0 /* valgen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7440859617F3B47AF4D3817 /* valgen.cpp */; };
 		EA02FA6D3B003F8F8A2963C6 /* toolbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE4B0CE56BA23002A5C8AEFF /* toolbar.cpp */; };
+		EA10DA3199813E90B39C70D3 /* xh_infobar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45C65E309F3A39598C043657 /* xh_infobar.cpp */; };
 		EAA469E1A0CC33E4A21A3F7A /* gaugecmn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 570D603125ED3A14848FA2E2 /* gaugecmn.cpp */; };
 		EAE02BA934B43EEE92C496C7 /* dcpsg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EEA0945B20913754A54D0FD9 /* dcpsg.cpp */; };
 		EB52C6A915943813932944FE /* control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12363D1F50FE301DAEE7F04A /* control.cpp */; };
@@ -1079,6 +1079,7 @@
 		4549845C0751356A907C23E0 /* jdtrans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = jdtrans.c; path = ../../src/jpeg/jdtrans.c; sourceTree = "<group>"; };
 		45860601270D318D93BEE1F3 /* LexMagik.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LexMagik.cxx; path = ../../src/stc/scintilla/lexers/LexMagik.cxx; sourceTree = "<group>"; };
 		4592464D4868329897F3864D /* LexSpice.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LexSpice.cxx; path = ../../src/stc/scintilla/lexers/LexSpice.cxx; sourceTree = "<group>"; };
+		45C65E309F3A39598C043657 /* xh_infobar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xh_infobar.cpp; path = ../../src/xrc/xh_infobar.cpp; sourceTree = "<group>"; };
 		45D7558DF5E03A2EB41883F0 /* pngwutil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = pngwutil.c; path = ../../src/png/pngwutil.c; sourceTree = "<group>"; };
 		45E7EC6D0C0E3C878664C0A9 /* fldlgcmn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = fldlgcmn.cpp; path = ../../src/common/fldlgcmn.cpp; sourceTree = "<group>"; };
 		47783A330B2A3B4EBB1CD95D /* fswatcherg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = fswatcherg.cpp; path = ../../src/generic/fswatcherg.cpp; sourceTree = "<group>"; };
@@ -1557,13 +1558,14 @@
 		CD72950967F33809931D4968 /* LexAbaqus.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LexAbaqus.cxx; path = ../../src/stc/scintilla/lexers/LexAbaqus.cxx; sourceTree = "<group>"; };
 		CDA232B9FFD33B7482E69B58 /* xh_tglbtn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = xh_tglbtn.cpp; path = ../../src/xrc/xh_tglbtn.cpp; sourceTree = "<group>"; };
 		CDB4AB7CDABA3A54B4F8207B /* imaggif.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = imaggif.cpp; path = ../../src/common/imaggif.cpp; sourceTree = "<group>"; };
-		45C65E309F3A39598C043657 /* xh_infobar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xh_infobar.cpp; path = ../../src/xrc/xh_infobar.cpp; sourceTree = "<group>"; };
 		CF23AF3EFC5731B2A5BCF4A3 /* choicdgg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = choicdgg.cpp; path = ../../src/generic/choicdgg.cpp; sourceTree = "<group>"; };
 		CF4F4F5211933057824B5621 /* button_osx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = button_osx.cpp; path = ../../src/osx/button_osx.cpp; sourceTree = "<group>"; };
 		CF502E0E4D853CBBBEC885EF /* LexerSimple.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LexerSimple.cxx; path = ../../src/stc/scintilla/lexlib/LexerSimple.cxx; sourceTree = "<group>"; };
 		CF6511DE2CB43534A5566403 /* menuitem_osx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = menuitem_osx.cpp; path = ../../src/osx/menuitem_osx.cpp; sourceTree = "<group>"; };
 		CFBDB327E4A236A3ABFA326F /* webviewfshandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = webviewfshandler.cpp; path = ../../src/common/webviewfshandler.cpp; sourceTree = "<group>"; };
 		D037EA567C253DEEA17E822B /* mousemanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mousemanager.cpp; path = ../../src/common/mousemanager.cpp; sourceTree = "<group>"; };
+		D06143F325165FD700AC055F /* private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
+		D06143F425165FD700AC055F /* chkconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chkconf.h; sourceTree = "<group>"; };
 		D0817D6A1AF83608B050EBC3 /* fontmap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = fontmap.cpp; path = ../../src/common/fontmap.cpp; sourceTree = "<group>"; };
 		D0B70966E9423F198C8CBE65 /* xh_cmdlinkbn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = xh_cmdlinkbn.cpp; path = ../../src/xrc/xh_cmdlinkbn.cpp; sourceTree = "<group>"; };
 		D0B9C41A4D12345AAA764CAD /* stc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stc.cpp; path = ../../src/stc/stc.cpp; sourceTree = "<group>"; };
@@ -1737,6 +1739,7 @@
 		02A787C8E96336F3B7287626 /* wxiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				D0613BE625165E8100AC055F /* include */,
 				82F403E7B8653CBD908BC258 /* Frameworks */,
 				C2FC1A9BBB8C3046994369BF /* Products */,
 				477B609FA2373FB58F4C8768 /* wxiphone.xcconfig */,
@@ -2724,6 +2727,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D0613BE625165E8100AC055F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D0613BEA25165E8100AC055F /* wx */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
+		D0613BEA25165E8100AC055F /* wx */ = {
+			isa = PBXGroup;
+			children = (
+				D061436925165FC400AC055F /* osx */,
+			);
+			path = wx;
+			sourceTree = "<group>";
+		};
+		D061436925165FC400AC055F /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				D06143F225165FD700AC055F /* iphone */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		D06143F225165FD700AC055F /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				D06143F325165FD700AC055F /* private.h */,
+				D06143F425165FD700AC055F /* chkconf.h */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
 		E96566B813153B4295AD767B /* stc */ = {
 			isa = PBXGroup;
 			children = (
@@ -2836,7 +2873,7 @@
 			isa = PBXProject;
 			attributes = {
 			};
-			buildConfigurationList = A66311F47C8832F6A58105B6 /* Build configuration list for PBXProject "wxiPhone" */;
+			buildConfigurationList = A66311F47C8832F6A58105B6 /* Build configuration list for PBXProject "wxiphone" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -3787,7 +3824,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A66311F47C8832F6A58105B6 /* Build configuration list for PBXProject "wxiPhone" */ = {
+		A66311F47C8832F6A58105B6 /* Build configuration list for PBXProject "wxiphone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55C93151F6053EBCBDD70DF9 /* Debug */,

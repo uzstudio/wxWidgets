@@ -87,7 +87,7 @@
 
 #if wxUSE_CHOICE
 #undef wxUSE_CHOICE
-#define wxUSE_CHOICE 0
+#define wxUSE_CHOICE 1
 #endif
 
 #if wxUSE_COMBOBOX
@@ -118,7 +118,7 @@
 #define wxUSE_STATLINE 0
 #define wxUSE_COLLPANE 0
 #define wxUSE_STATBMP 0
-#define wxUSE_STATBOX 0
+#define wxUSE_STATBOX 1
 #define wxUSE_RADIOBTN 0
 #define wxUSE_RADIOBOX 0
 #define wxUSE_TOGGLEBTN 0
@@ -168,21 +168,21 @@
 #define wxUSE_COMBOCTRL 0
 #define wxUSE_ODCOMBOBOX 0
 #define wxUSE_BITMAPCOMBOBOX 0
-#define wxUSE_BMPBUTTON 0
+#define wxUSE_BMPBUTTON 1
 #define wxUSE_CHECKLISTBOX 0
 #define wxUSE_GRID 0
 #define wxUSE_LISTBOX 0
-#define wxUSE_LISTCTRL 0
+#define wxUSE_LISTCTRL 1
 #define wxUSE_NOTEBOOK 0
 #define wxUSE_SPINBTN 0
 #define wxUSE_SPINCTRL 0
-#define wxUSE_TREECTRL 0
+#define wxUSE_TREECTRL 1
 #define wxUSE_DATEPICKCTRL 0
 #define wxUSE_DATAVIEWCTRL 0
 #define wxUSE_EDITABLELISTBOX 0
 #define wxUSE_FILEPICKERCTRL 0
 #define wxUSE_DIRPICKERCTRL 0
-#define wxUSE_FILECTRL 0
+#define wxUSE_FILECTRL 1
 #define wxUSE_COLOURPICKERCTRL 0
 #define wxUSE_FONTPICKERCTRL 0
 #define wxUSE_DEBUGREPORT 0
@@ -224,11 +224,11 @@
 #define wxUSE_HELP 0
 #define wxUSE_PROGRESSDLG 0
 #define  wxUSE_FONTDLG 0
-#define wxUSE_FILEDLG 0
+#define wxUSE_FILEDLG 1
 #define wxUSE_CHOICEDLG 0
 #define wxUSE_NUMBERDLG 0
-#define wxUSE_TEXTDLG 0
-#define wxUSE_DIRDLG 0
+#define wxUSE_TEXTDLG 1
+#define wxUSE_DIRDLG 1
 #define wxUSE_STARTUP_TIPS 0
 #define wxUSE_WIZARDDLG 0
 #define wxUSE_TOOLBAR_NATIVE 0
