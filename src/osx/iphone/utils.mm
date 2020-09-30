@@ -96,7 +96,7 @@ void wxApp::DoCleanUp()
 void wxBell()
 {
     // would be kSystemSoundID_UserPreferredAlert but since the headers aren't correct, add it manually
-    AudioServicesPlayAlertSound(0x00001000 );
+    // CP AudioServicesPlayAlertSound(0x00001000 );
 }
 
 // ----------------------------------------------------------------------------
