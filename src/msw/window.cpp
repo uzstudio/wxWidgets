@@ -3559,10 +3559,14 @@ wxWindowMSW::MSWHandleMessage(WXLRESULT *result,
 #if wxUSE_ACCESSIBILITY
         case WM_GETOBJECT:
             {
-                //WPARAM dwFlags = (WPARAM) (DWORD) wParam;
-                LPARAM dwObjId = (LPARAM) (DWORD) lParam;
-
-                if (dwObjId == (LPARAM)OBJID_CLIENT && GetOrCreateAccessible())
+                // As per MSDN example - the correct way to compare this values
+                // is to cast them both to DWORD
+                // https://docs.microsoft.com/en-us/windows/win32/winauto/reuse-existing-pointers-to-objects
+                // For the lParam - sign extension happens, as LPARM is a signed integer.
+                // OBJID_CLIENT is defined as ((LONG)0xFFFFFFFC), we cast it DWORD so no warning is generated
+                // In the original code, however, it was sign extended as well, as we were comparing againg signed
+                // 64-bit value.
+                if ((DWORD)lParam == (DWORD)OBJID_CLIENT && GetOrCreateAccessible())
                 {
                     processed = true;
                     rc.result = LresultFromObject(IID_IAccessible, wParam, (IUnknown*) GetAccessible()->GetIAccessible());
